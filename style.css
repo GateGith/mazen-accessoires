@@ -2,7 +2,6 @@
    MAZEN ACCESSOIRES — STYLE COMPLET
    ============================================================ */
 
-/* ----- RESET ----- */
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +28,6 @@ body {
     margin: 0 auto;
 }
 
-/* ----- COLORS ----- */
 :root {
     --gold: #c9a84c;
     --gold-dark: #a8892e;
@@ -44,9 +42,7 @@ body {
     --red: #8b1a1a;
 }
 
-/* ============================================================
-   NAVBAR
-   ============================================================ */
+/* ===== NAVBAR ===== */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -135,9 +131,7 @@ body {
     color: var(--white) !important;
 }
 
-/* ============================================================
-   HERO
-   ============================================================ */
+/* ===== HERO ===== */
 .hero {
     padding: 3rem 0 4rem;
 }
@@ -338,9 +332,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* ============================================================
-   SECTIONS
-   ============================================================ */
+/* ===== SECTIONS ===== */
 .section {
     padding: 4rem 0;
 }
@@ -373,9 +365,7 @@ body {
     margin-top: 0.3rem;
 }
 
-/* ============================================================
-   WHY MAZEN
-   ============================================================ */
+/* ===== WHY MAZEN ===== */
 .why-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -390,7 +380,6 @@ body {
     border-radius: 1rem;
     background: var(--gray);
     transition: all 0.3s ease;
-    position: relative;
 }
 
 .why-card:hover {
@@ -417,9 +406,7 @@ body {
     margin-top: 0.2rem;
 }
 
-/* ============================================================
-   COLLECTIONS
-   ============================================================ */
+/* ===== COLLECTIONS ===== */
 .collections-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -444,9 +431,22 @@ body {
 }
 
 .collection-image {
-    font-size: 3rem;
-    display: block;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 0.8rem;
     margin-bottom: 0.8rem;
+    background: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.collection-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .collection-card h4 {
@@ -460,9 +460,7 @@ body {
     color: var(--text-light);
 }
 
-/* ============================================================
-   STORES
-   ============================================================ */
+/* ===== STORES ===== */
 .stores-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -473,11 +471,12 @@ body {
 
 .store-card {
     text-align: center;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     background: var(--gray);
     transition: all 0.3s ease;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .store-card:hover {
@@ -487,17 +486,30 @@ body {
     transform: translateY(-6px);
 }
 
-.store-icon {
-    font-size: 1.8rem;
-    display: block;
-    margin-bottom: 0.5rem;
+.store-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    margin-bottom: 0.8rem;
+    background: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.store-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .store-card h4 {
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     color: var(--gold-dark);
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
 }
 
 .store-address {
@@ -515,12 +527,12 @@ body {
 }
 
 .store-phone {
-    display: block;
+    display: inline-block;
     color: var(--black);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.85rem;
-    margin-top: 0.5rem;
+    margin: 0.3rem 0.2rem;
     transition: color 0.3s ease;
 }
 
@@ -529,17 +541,31 @@ body {
 }
 
 .store-whatsapp {
-    display: block;
+    display: inline-block;
     color: #25D366;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.8rem;
-    margin-top: 0.2rem;
+    margin: 0.2rem 0.2rem;
     transition: color 0.3s ease;
 }
 
 .store-whatsapp:hover {
     color: #1da851;
+}
+
+.store-map {
+    display: inline-block;
+    color: var(--gold-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.75rem;
+    margin: 0.2rem 0.2rem;
+    transition: color 0.3s ease;
+}
+
+.store-map:hover {
+    color: var(--gold);
 }
 
 .store-manager {
@@ -552,9 +578,7 @@ body {
     border-radius: 1rem;
 }
 
-/* ============================================================
-   GALLERY
-   ============================================================ */
+/* ===== GALLERY ===== */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -567,12 +591,19 @@ body {
     aspect-ratio: 1 / 1;
     background: var(--gray);
     border-radius: 0.8rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(201, 168, 76, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(201, 168, 76, 0.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .gallery-item:hover {
@@ -580,9 +611,7 @@ body {
     transform: scale(1.03);
 }
 
-/* ============================================================
-   SOCIAL PROOF
-   ============================================================ */
+/* ===== SOCIAL PROOF ===== */
 .social-section {
     padding: 2rem 0 3rem;
 }
@@ -653,9 +682,7 @@ body {
     color: var(--gold);
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* ===== FOOTER ===== */
 .footer {
     padding: 3rem 0 1.5rem;
     border-top: 1px solid rgba(201, 168, 76, 0.1);
@@ -713,31 +740,24 @@ body {
     color: var(--gold);
 }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
     .hero-text {
         text-align: center;
     }
-    
     .hero-description {
         margin: 1.2rem auto 2rem;
     }
-    
     .hero-buttons {
         justify-content: center;
     }
-    
     .why-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
     .collections-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -747,52 +767,41 @@ body {
     body {
         padding: 1rem;
     }
-    
     .navbar {
         flex-direction: column;
         align-items: center;
         gap: 0.8rem;
     }
-    
     .nav-links {
         gap: 1rem;
         justify-content: center;
     }
-    
     .hero-visual-card {
         padding: 2rem 1.5rem;
         max-width: 300px;
     }
-    
     .hero-visual-text {
         font-size: 1.6rem;
     }
-    
     .hero-visual-sub {
         font-size: 0.8rem;
     }
-    
     .why-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
     .collections-grid {
         grid-template-columns: 1fr 1fr;
     }
-    
     .stores-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
     }
-    
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
     .social-proof {
         gap: 1rem;
     }
-    
     .social-item {
         min-width: 150px;
         padding: 1rem;
@@ -803,34 +812,27 @@ body {
     .why-grid {
         grid-template-columns: 1fr;
     }
-    
     .collections-grid {
         grid-template-columns: 1fr;
     }
-    
     .gallery-grid {
         grid-template-columns: 1fr 1fr;
     }
-    
     .hero h1 {
         font-size: 2.2rem;
     }
-    
     .hero-buttons .btn-primary,
     .hero-buttons .btn-outline {
         width: 100%;
         justify-content: center;
     }
-    
     .hero-visual-card {
         padding: 1.5rem 1rem;
         max-width: 250px;
     }
-    
     .hero-visual-text {
         font-size: 1.3rem;
     }
-    
     .social-proof {
         flex-direction: column;
         align-items: center;
