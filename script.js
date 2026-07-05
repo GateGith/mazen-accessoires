@@ -5,7 +5,7 @@
 console.log('🚀 Mazen Accessoires — Premium Version');
 
 // ============================================================
-// 3D TILT EFFECT ON MOUSE MOVE
+// 3D TILT EFFECT
 // ============================================================
 document.querySelectorAll('.hero-visual-card, .store-card, .collection-card, .social-item').forEach(el => {
     el.addEventListener('mousemove', (e) => {
@@ -25,7 +25,7 @@ document.querySelectorAll('.hero-visual-card, .store-card, .collection-card, .so
 });
 
 // ============================================================
-// SMOOTH SCROLL FOR NAV LINKS
+// SMOOTH SCROLL
 // ============================================================
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', function(e) {
@@ -41,7 +41,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // ============================================================
-// SCROLL REVEAL (Fallback)
+// SCROLL REVEAL
 // ============================================================
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
