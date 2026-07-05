@@ -1,5 +1,5 @@
 /* ============================================================
-   MAZEN ACCESSOIRES — STYLE 3D, GADGETS, LAYERS
+   MAZEN ACCESSOIRES — STYLE COMPLET
    ============================================================ */
 
 /* ----- RESET ----- */
@@ -20,10 +20,7 @@ body {
     line-height: 1.6;
     padding: 1.5rem;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
+    display: block;
 }
 
 .container {
@@ -45,47 +42,6 @@ body {
     --text-dark: #1a1a1a;
     --text-light: #5a5a5a;
     --red: #8b1a1a;
-}
-
-/* ============================================================
-   3D LAYER EFFECT
-   ============================================================ */
-.layer-3d {
-    position: relative;
-    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.6s ease;
-    transform-style: preserve-3d;
-    perspective: 800px;
-}
-
-.layer-3d::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(0,0,0,0.02) 100%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.layer-3d::after {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    border-radius: inherit;
-    background: linear-gradient(135deg, var(--gold-light), transparent 40%, var(--gold-darker));
-    z-index: -1;
-    opacity: 0.3;
-    filter: blur(4px);
-    transition: opacity 0.6s ease;
-}
-
-.layer-3d:hover::after {
-    opacity: 0.6;
-}
-
-.layer-3d:hover {
-    transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
-    box-shadow: 0 25px 50px rgba(168, 137, 46, 0.15);
 }
 
 /* ============================================================
@@ -193,7 +149,6 @@ body {
     align-items: center;
 }
 
-/* ---- Hero Visual Card (Gadget / Layer) ---- */
 .hero-visual {
     display: flex;
     justify-content: center;
@@ -210,6 +165,12 @@ body {
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-visual-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(168, 137, 46, 0.2);
 }
 
 .hero-visual-glow {
@@ -266,7 +227,6 @@ body {
     50% { transform: translateY(-10px) scale(1.2); opacity: 0.8; }
 }
 
-/* ---- Hero Text ---- */
 .hero-text {
     text-align: left;
 }
