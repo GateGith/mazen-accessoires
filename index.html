@@ -12,10 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    
-    <!-- AOS Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -23,7 +19,7 @@
     <div class="container">
         
         <!-- ===== NAVBAR ===== -->
-        <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
+        <nav class="navbar">
             <div class="logo">MAZEN</div>
             <ul class="nav-links">
                 <li><a href="#collections">Collections</a></li>
@@ -34,21 +30,19 @@
         </nav>
         
         <!-- ===== HERO ===== -->
-        <section class="hero" data-aos="fade-up" data-aos-duration="1000">
+        <section class="hero">
             <div class="hero-content">
                 
-                <!-- Visual Card (Gadget / Layer Effect) -->
-                <div class="hero-visual" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1200">
-                    <div class="hero-visual-card layer-3d">
+                <div class="hero-visual">
+                    <div class="hero-visual-card">
                         <div class="hero-visual-glow"></div>
-                        <div class="hero-visual-text">Mazen Accessoires</div>
-                        <div class="hero-visual-sub">تركيب الجوهر الحر و الكريستال و الأحجار الكريمة</div>
-                        <div class="hero-visual-sparkle">✦</div>
+                        <span class="hero-visual-text">Mazen Accessoires</span>
+                        <span class="hero-visual-sub">تركيب الجوهر الحر و الكريستال و الأحجار الكريمة</span>
+                        <span class="hero-visual-sparkle">✦</span>
                     </div>
                 </div>
                 
-                <!-- Hero Text -->
-                <div class="hero-text" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                <div class="hero-text">
                     <span class="hero-badge">✨ Élégance & Authenticité</span>
                     <h1>MAZEN <span>ACCESSOIRES</span></h1>
                     <p class="hero-subtitle">Élégance • Cristal • Pierres Précieuses</p>
@@ -65,32 +59,32 @@
         
         <!-- ===== WHY MAZEN ===== -->
         <section class="section why-section">
-            <div class="section-header" data-aos="fade-up">
+            <div class="section-header">
                 <span class="label">Pourquoi Mazen</span>
                 <h2>L'excellence à chaque détail</h2>
             </div>
             <div class="why-grid">
-                <div class="why-card" data-aos="flip-up" data-aos-delay="100">
+                <div class="why-card">
                     <span class="why-icon">💎</span>
                     <h4>Large choix</h4>
                     <p>Des pièces uniques pour tous les styles</p>
                 </div>
-                <div class="why-card" data-aos="flip-up" data-aos-delay="200">
+                <div class="why-card">
                     <span class="why-icon">⭐</span>
                     <h4>Qualité</h4>
                     <p>Des matériaux sélectionnés avec soin</p>
                 </div>
-                <div class="why-card" data-aos="flip-up" data-aos-delay="300">
+                <div class="why-card">
                     <span class="why-icon">🪨</span>
                     <h4>Pierres naturelles</h4>
                     <p>Authenticité et beauté brute</p>
                 </div>
-                <div class="why-card" data-aos="flip-up" data-aos-delay="400">
+                <div class="why-card">
                     <span class="why-icon">✨</span>
                     <h4>Cristal</h4>
                     <p>Éclat et raffinement</p>
                 </div>
-                <div class="why-card" data-aos="flip-up" data-aos-delay="500">
+                <div class="why-card">
                     <span class="why-icon">🤝</span>
                     <h4>Service personnalisé</h4>
                     <p>Un accompagnement sur mesure</p>
@@ -100,28 +94,28 @@
         
         <!-- ===== COLLECTIONS ===== -->
         <section class="section" id="collections">
-            <div class="section-header" data-aos="fade-up">
+            <div class="section-header">
                 <span class="label">Collections</span>
                 <h2>Nos collections</h2>
             </div>
             <div class="collections-grid">
-                <div class="collection-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="collection-image layer-3d">💍</div>
+                <div class="collection-card">
+                    <span class="collection-image">💍</span>
                     <h4>Bijoux</h4>
                     <p>Fins, élégants, intemporels</p>
                 </div>
-                <div class="collection-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="collection-image layer-3d">💎</div>
+                <div class="collection-card">
+                    <span class="collection-image">💎</span>
                     <h4>Cristal</h4>
                     <p>Éclat et pureté</p>
                 </div>
-                <div class="collection-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="collection-image layer-3d">🪨</div>
+                <div class="collection-card">
+                    <span class="collection-image">🪨</span>
                     <h4>Pierres précieuses</h4>
                     <p>Naturelles et authentiques</p>
                 </div>
-                <div class="collection-card" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="collection-image layer-3d">🧣</div>
+                <div class="collection-card">
+                    <span class="collection-image">🧣</span>
                     <h4>Accessoires</h4>
                     <p>Pour sublimer chaque look</p>
                 </div>
@@ -130,15 +124,14 @@
         
         <!-- ===== STORES ===== -->
         <section class="section" id="stores">
-            <div class="section-header" data-aos="fade-up">
+            <div class="section-header">
                 <span class="label">Nos magasins</span>
                 <h2>Où nous trouver</h2>
             </div>
             <div class="stores-grid">
                 
-                <!-- Shop 1: Kouba -->
-                <div class="store-card layer-3d" data-aos="flip-left" data-aos-delay="100">
-                    <div class="store-icon">📍</div>
+                <div class="store-card">
+                    <span class="store-icon">📍</span>
                     <h4>Mazen bijoux kouba</h4>
                     <p class="store-address">شارع عبيد سعودي, Kouba</p>
                     <p class="store-type">Jewelry store</p>
@@ -146,9 +139,8 @@
                     <span class="store-manager">Ahmed</span>
                 </div>
                 
-                <!-- Shop 2: Koléa -->
-                <div class="store-card layer-3d" data-aos="flip-left" data-aos-delay="200">
-                    <div class="store-icon">📍</div>
+                <div class="store-card">
+                    <span class="store-icon">📍</span>
                     <h4>Mazen</h4>
                     <p class="store-address">JQRF+VGH, Route d'Alger, Koléa</p>
                     <p class="store-type">Fashion accessoires store</p>
@@ -157,9 +149,8 @@
                     <span class="store-manager">Youcef</span>
                 </div>
                 
-                <!-- Shop 3: Birtouta -->
-                <div class="store-card layer-3d" data-aos="flip-left" data-aos-delay="300">
-                    <div class="store-icon">📍</div>
+                <div class="store-card">
+                    <span class="store-icon">📍</span>
                     <h4>Accessoires MAZEN</h4>
                     <p class="store-address">طريق خرايسية, Birtouta</p>
                     <p class="store-type">Costume jewelry store</p>
@@ -171,31 +162,31 @@
         
         <!-- ===== GALLERY ===== -->
         <section class="section" id="gallery">
-            <div class="section-header" data-aos="fade-up">
+            <div class="section-header">
                 <span class="label">Galerie</span>
                 <h2>Inspirations</h2>
                 <p>Suivez-nous sur Instagram & Facebook</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item layer-3d" data-aos="zoom-in" data-aos-delay="100"><span>📸</span></div>
-                <div class="gallery-item layer-3d" data-aos="zoom-in" data-aos-delay="150"><span>📸</span></div>
-                <div class="gallery-item layer-3d" data-aos="zoom-in" data-aos-delay="200"><span>📸</span></div>
-                <div class="gallery-item layer-3d" data-aos="zoom-in" data-aos-delay="250"><span>📸</span></div>
-                <div class="gallery-item layer-3d" data-aos="zoom-in" data-aos-delay="300"><span>📸</span></div>
-                <div class="gallery-item layer-3d" data-aos="zoom-in" data-aos-delay="350"><span>📸</span></div>
+                <div class="gallery-item"><span>📸</span></div>
+                <div class="gallery-item"><span>📸</span></div>
+                <div class="gallery-item"><span>📸</span></div>
+                <div class="gallery-item"><span>📸</span></div>
+                <div class="gallery-item"><span>📸</span></div>
+                <div class="gallery-item"><span>📸</span></div>
             </div>
         </section>
         
         <!-- ===== SOCIAL PROOF ===== -->
-        <section class="section social-section" data-aos="fade-up">
+        <section class="section social-section">
             <div class="social-proof">
-                <div class="social-item layer-3d" data-aos="flip-up" data-aos-delay="100">
+                <div class="social-item">
                     <i class="fab fa-facebook"></i>
                     <span class="social-name">مجوهرات مازن</span>
                     <span class="social-count">21K</span>
                     <a href="https://www.facebook.com/share/1JWfdh7es3/" target="_blank" class="social-link">Suivre →</a>
                 </div>
-                <div class="social-item layer-3d" data-aos="flip-up" data-aos-delay="200">
+                <div class="social-item">
                     <i class="fab fa-instagram"></i>
                     <span class="social-name">youcef_bijoux16</span>
                     <span class="social-count">69.3K</span>
@@ -205,7 +196,7 @@
         </section>
         
         <!-- ===== FOOTER ===== -->
-        <footer class="footer" id="contact" data-aos="fade-up">
+        <footer class="footer" id="contact">
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>MAZEN</h3>
@@ -223,8 +214,6 @@
         
     </div>
     
-    <!-- ===== SCRIPTS ===== -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
