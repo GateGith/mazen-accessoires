@@ -1,60 +1,73 @@
 // ============================================================
-// MAZEN ACCESSOIRES — SCRIPTS
+// MAZEN ACCESSOIRES — SCRIPT
 // ============================================================
 
-console.log('🚀 Mazen Accessoires — Premium Version');
-
-// ============================================================
-// 3D TILT EFFECT
-// ============================================================
-document.querySelectorAll('.hero-visual-card, .store-card, .collection-card, .social-item').forEach(el => {
-    el.addEventListener('mousemove', (e) => {
-        const rect = el.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = (y - centerY) / 20;
-        const rotateY = (centerX - x) / 20;
-        el.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+// === SCROLL REVEAL (Apparition au défilement) ===
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.store-card');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
     });
     
-    el.addEventListener('mouseleave', () => {
-        el.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+    elements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+        observer.observe(el);
     });
 });
 
-// ============================================================
-// SMOOTH SCROLL
-// ============================================================
-document.querySelectorAll('.nav-links a').forEach(link => {
+// === CLIC SUR LE NUMÉRO DE TÉLÉPHONE (confirmation) ===
+document.querySelectorAll('.store-phone').forEach(link => {
     link.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href.startsWith('#')) {
+        const phone = this.textContent.trim();
+        if (!confirm(`📞 Appeler ${phone} ?`)) {
             e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
         }
     });
 });
 
-// ============================================================
-// SCROLL REVEAL
-// ============================================================
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+// === ANIMATION DES ICÔNES AU SURVOL ===
+document.querySelectorAll('.store-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        const icon = this.querySelector('.store-icon');
+        if (icon) {
+            icon.style.transform = 'scale(1.15) rotate(-5deg)';
+            icon.style.transition = 'transform 0.3s ease';
         }
     });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.why-card, .collection-card, .store-card, .gallery-item, .social-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
+    card.addEventListener('mouseleave', function() {
+        const icon = this.querySelector('.store-icon');
+        if (icon) {
+            icon.style.transform = 'scale(1) rotate(0deg)';
+        }
+    });
 });
+
+// === COPIE DU NUMÉRO (clic droit) ===
+document.querySelectorAll('.store-phone').forEach(link => {
+    link.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        const phone = this.textContent.trim().replace(/\s/g, '');
+        navigator.clipboard.writeText(phone).then(() => {
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-check"></i> Copié !';
+            setTimeout(() => {
+                this.innerHTML = originalText;
+            }, 1500);
+        }).catch(() => {
+            alert('📋 Copier manuellement : ' + phone);
+        });
+    });
+});
+
+console.log('✨ Mazen Accessoires — Site chargé avec succès !');
