@@ -3,55 +3,144 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mazen Accessoires — Nos Magasins</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Mazen Accessoires — Bijoux, Cristal & Pierres Précieuses</title>
+    <meta name="description" content="Mazen Accessoires : bijoux, cristal et pierres précieuses. Découvrez nos collections et trouvez votre magasin." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="container">
         
+        <!-- ===== NAVBAR ===== -->
+        <nav class="navbar">
+            <div class="logo">MAZEN</div>
+            <ul class="nav-links">
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#stores">Magasins</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+        </nav>
+        
         <!-- ===== HERO ===== -->
         <section class="hero">
             <div class="hero-content">
+                <div class="hero-visual">
+                    <div class="hero-visual-card">
+                        <div class="hero-visual-glow"></div>
+                        <span class="hero-visual-text">Mazen Accessoires</span>
+                        <span class="hero-visual-sub">تركيب الجوهر الحر و الكريستال و الأحجار الكريمة</span>
+                        <span class="hero-visual-sparkle">✦</span>
+                    </div>
+                </div>
                 <div class="hero-text">
                     <span class="hero-badge">✨ Élégance & Authenticité</span>
                     <h1>MAZEN <span>ACCESSOIRES</span></h1>
-                    <p class="hero-subtitle">Bijoux • Cristal • Pierres Précieuses</p>
+                    <p class="hero-subtitle">Élégance • Cristal • Pierres Précieuses</p>
                     <p class="hero-description">
                         Depuis plusieurs années, Mazen Accessoires propose des bijoux et accessoires sélectionnés avec soin pour sublimer chaque style.
                     </p>
                     <div class="hero-buttons">
                         <a href="#stores" class="btn-primary"><i class="fas fa-store"></i> Nos magasins</a>
-                        <a href="https://wa.me/213540643343" target="_blank" class="btn-outline"><i class="fab fa-whatsapp"></i> Commander</a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-visual-card">
-                        <span class="hero-visual-text">Mazen</span>
-                        <span class="hero-visual-sub">تركيب الجوهر الحر و الكريستال و الأحجار الكريمة</span>
-                        <span class="hero-visual-sparkle">✦</span>
+                        <a href="https://wa.me/213540643343" target="_blank" class="btn-outline"><i class="fab fa-whatsapp"></i> Commander sur WhatsApp</a>
                     </div>
                 </div>
             </div>
         </section>
-
+        
+        <!-- ===== WHY MAZEN ===== -->
+        <section class="section why-section">
+            <div class="section-header">
+                <span class="label">Pourquoi Mazen</span>
+                <h2>L'excellence à chaque détail</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <span class="why-icon">💎</span>
+                    <h4>Large choix</h4>
+                    <p>Des pièces uniques pour tous les styles</p>
+                </div>
+                <div class="why-card">
+                    <span class="why-icon">⭐</span>
+                    <h4>Qualité</h4>
+                    <p>Des matériaux sélectionnés avec soin</p>
+                </div>
+                <div class="why-card">
+                    <span class="why-icon">🪨</span>
+                    <h4>Pierres naturelles</h4>
+                    <p>Authenticité et beauté brute</p>
+                </div>
+                <div class="why-card">
+                    <span class="why-icon">✨</span>
+                    <h4>Cristal</h4>
+                    <p>Éclat et raffinement</p>
+                </div>
+                <div class="why-card">
+                    <span class="why-icon">🤝</span>
+                    <h4>Service personnalisé</h4>
+                    <p>Un accompagnement sur mesure</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== COLLECTIONS ===== -->
+        <section class="section" id="collections">
+            <div class="section-header">
+                <span class="label">Collections</span>
+                <h2>Nos collections</h2>
+            </div>
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="images/bijou1.jpg" alt="Bijoux" onerror="this.style.display='none';this.parentElement.textContent='💍'">
+                    </div>
+                    <h4>Bijoux</h4>
+                    <p>Fins, élégants, intemporels</p>
+                </div>
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="images/cristal1.jpg" alt="Cristal" onerror="this.style.display='none';this.parentElement.textContent='💎'">
+                    </div>
+                    <h4>Cristal</h4>
+                    <p>Éclat et pureté</p>
+                </div>
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="images/pierre1.jpg" alt="Pierres précieuses" onerror="this.style.display='none';this.parentElement.textContent='🪨'">
+                    </div>
+                    <h4>Pierres précieuses</h4>
+                    <p>Naturelles et authentiques</p>
+                </div>
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="images/accessoire1.jpg" alt="Accessoires" onerror="this.style.display='none';this.parentElement.textContent='🧣'">
+                    </div>
+                    <h4>Accessoires</h4>
+                    <p>Pour sublimer chaque look</p>
+                </div>
+            </div>
+        </section>
+        
         <!-- ===== STORES ===== -->
         <section class="section" id="stores">
             <div class="section-header">
                 <span class="label">Nos magasins</span>
                 <h2>Où nous trouver</h2>
-                <p>Trois boutiques à votre service</p>
             </div>
             <div class="stores-grid">
                 
-                <!-- Boutique 1: Kouba -->
+                <!-- Shop 1: Kouba -->
                 <div class="store-card">
-                    <div class="store-icon">💎</div>
-                    <h3>Mazen bijoux kouba</h3>
+                    <div class="store-image">
+                        <img src="images/shop1.jpg" alt="Mazen bijoux kouba" onerror="this.style.display='none';this.parentElement.textContent='📍'">
+                    </div>
+                    <h4>Mazen bijoux kouba</h4>
                     <p class="store-address"><i class="fas fa-location-dot"></i> شارع عبيد سعودي, Kouba</p>
-                    <p class="store-type">JEWELRY STORE</p>
+                    <p class="store-type">Jewelry store</p>
+                    <!-- ✅ TOUT EN UNE LIGNE -->
                     <div class="store-contact-row">
                         <a href="tel:0540643343" class="store-phone"><i class="fas fa-phone"></i> 0540 643 343</a>
                         <span class="separator">|</span>
@@ -61,12 +150,15 @@
                     </div>
                 </div>
                 
-                <!-- Boutique 2: Koléa -->
+                <!-- Shop 2: Koléa -->
                 <div class="store-card">
-                    <div class="store-icon">👗</div>
-                    <h3>Mazen</h3>
+                    <div class="store-image">
+                        <img src="images/shop2.jpg" alt="Mazen Koléa" onerror="this.style.display='none';this.parentElement.textContent='📍'">
+                    </div>
+                    <h4>Mazen</h4>
                     <p class="store-address"><i class="fas fa-location-dot"></i> JQRF+VGH, Route d'Alger, Koléa</p>
-                    <p class="store-type">FASHION ACCESSOIRES STORE</p>
+                    <p class="store-type">Fashion accessoires store</p>
+                    <!-- ✅ TOUT EN UNE LIGNE -->
                     <div class="store-contact-row">
                         <a href="tel:0560854895" class="store-phone"><i class="fas fa-phone"></i> 0560 85 48 95</a>
                         <span class="separator">|</span>
@@ -78,12 +170,15 @@
                     </div>
                 </div>
                 
-                <!-- Boutique 3: Birtouta -->
+                <!-- Shop 3: Birtouta -->
                 <div class="store-card">
-                    <div class="store-icon">📿</div>
-                    <h3>Accessoires MAZEN</h3>
+                    <div class="store-image">
+                        <img src="images/shop3.jpg" alt="Accessoires MAZEN Birtouta" onerror="this.style.display='none';this.parentElement.textContent='📍'">
+                    </div>
+                    <h4>Accessoires MAZEN</h4>
                     <p class="store-address"><i class="fas fa-location-dot"></i> طريق خرايسية, Birtouta</p>
-                    <p class="store-type">COSTUME JEWELRY STORE</p>
+                    <p class="store-type">Costume jewelry store</p>
+                    <!-- ✅ TOUT EN UNE LIGNE -->
                     <div class="store-contact-row">
                         <a href="tel:0552919528" class="store-phone"><i class="fas fa-phone"></i> 0552 91 95 28</a>
                         <span class="separator">|</span>
@@ -94,9 +189,56 @@
                 </div>
             </div>
         </section>
-
+        
+        <!-- ===== GALLERY ===== -->
+        <section class="section" id="gallery">
+            <div class="section-header">
+                <span class="label">Galerie</span>
+                <h2>Inspirations</h2>
+                <p>Suivez-nous sur Instagram & Facebook</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/bijou2.jpg" alt="Bijou 2" onerror="this.style.display='none';this.parentElement.textContent='📸'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/bijou3.jpg" alt="Bijou 3" onerror="this.style.display='none';this.parentElement.textContent='📸'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/bijou4.jpg" alt="Bijou 4" onerror="this.style.display='none';this.parentElement.textContent='📸'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/cristal2.jpg" alt="Cristal 2" onerror="this.style.display='none';this.parentElement.textContent='📸'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/pierre2.jpg" alt="Pierre 2" onerror="this.style.display='none';this.parentElement.textContent='📸'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/accessoire2.jpg" alt="Accessoire 2" onerror="this.style.display='none';this.parentElement.textContent='📸'">
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== SOCIAL PROOF ===== -->
+        <section class="section social-section">
+            <div class="social-proof">
+                <div class="social-item">
+                    <i class="fab fa-facebook"></i>
+                    <span class="social-name">مجوهرات مازن</span>
+                    <span class="social-count">21K</span>
+                    <a href="https://www.facebook.com/share/1JWfdh7es3/" target="_blank" class="social-link">Suivre →</a>
+                </div>
+                <div class="social-item">
+                    <i class="fab fa-instagram"></i>
+                    <span class="social-name">youcef_bijoux16</span>
+                    <span class="social-count">69.3K</span>
+                    <a href="https://www.instagram.com/youcef_bijoux16?igsh=dXphMGN4cTNsZW03" target="_blank" class="social-link">Suivre →</a>
+                </div>
+            </div>
+        </section>
+        
         <!-- ===== FOOTER ===== -->
-        <footer class="footer">
+        <footer class="footer" id="contact">
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>MAZEN</h3>
@@ -106,6 +248,7 @@
                     <a href="https://www.instagram.com/youcef_bijoux16" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.facebook.com/share/1JWfdh7es3/" target="_blank"><i class="fab fa-facebook"></i></a>
                     <a href="https://wa.me/213540643343" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#stores"><i class="fas fa-map-marked-alt"></i></a>
                 </div>
                 <p class="footer-credit">© 2026 Mazen Accessoires — Réalisé avec <i class="fas fa-heart" style="color:#c9a84c;"></i></p>
             </div>
